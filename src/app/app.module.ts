@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { MainPageComponent } from './components/pages/main-page/main-page.component';
+import { LogoComponent } from './components/main-components/logo/logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    MainPageComponent
+    MainPageComponent,
+    LogoComponent
   ],
   imports: [
     AppRoutingModule,
