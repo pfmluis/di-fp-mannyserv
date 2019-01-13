@@ -1,0 +1,15 @@
+.myNavbar{
+  background-color: #ffffff!important;
+  min-height: 50px;
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+.logo{
+  margin: 0px 5px;
+  height: 40px;
+}

@@ -1,0 +1,33 @@
+.my-dropdown-toggle{
+  cursor: pointer;
+  text-align: right;
+  color: #007bff!important;
+}
+
+.my-dropdown-menu{
+  margin-top: 7px;
+  border-top: none;
+  border-radius: 0px 0px 10px 10px;
+  left: -100px;
+}
+
+.my-dropbox-item{
+  cursor: pointer;
+}
+
+.my-nav-btn{
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.my-welcome{
+  color: #333333!important;
+  cursor: default;
+  padding-right: 0px!important;
+}
+
+.divisor{
+  border-left:1px solid #000;
+  height:30px;
+  margin: 5px 5px 0px 5px;
+}

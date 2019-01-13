@@ -1,22 +1,30 @@
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { LoginPageComponent } from './components/pages/login-page/login-page.component';
-import { MainPageComponent } from './components/pages/main-page/main-page.component';
-import { LogoComponent } from './components/main-components/logo/logo.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { LoginCardComponent } from './components/login-card/login-card.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { NavbarButtonsComponent } from './components/navbar-buttons/navbar-buttons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     MainPageComponent,
-    LogoComponent
+    LoginCardComponent,
+    NavbarComponent,
+    SearchPageComponent,
+    NavbarButtonsComponent,
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

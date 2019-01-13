@@ -1,0 +1,78 @@
+#login-container{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px 50px;
+    width: 500px;
+}
+
+#forgotPwDiv{
+    text-align: right;
+    font-size: 13px;
+    color: #007bff;
+}
+
+#forgotPwDiv:hover{
+    color: #3b5998;
+    cursor: pointer;
+}
+
+#registerLink{
+    margin-left: 5px;
+    color: #007bff;
+}
+
+#registerLink:hover{
+    color: #3b5998;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#registerNowDiv{
+    margin-left: 16%;
+    width: 68%;
+    font-size: 12px;
+}
+
+#rememberMeDiv{
+    font-size: 13px;
+}
+
+.button-image{
+    width: 25px;
+}
+
+#facebookLogin{
+    background: #3b5998;
+}
+
+#google-icon{
+    margin-right: 10%;
+}
+
+#facebook-icon{
+    margin-right: 5%;
+}
+
+#separator{
+    margin: 25px 0px;
+}
+
+#login-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.invalid-input{
+    font-size: 12px;
+    color: #dc3545;
+}
+
+.logo-container{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-input{
+    background-color: #F3F3F3;
+}
