@@ -1,0 +1,54 @@
+<div class="page-wrapper">
+  <nav class="navbar navbar-expand-lg bg-light myNavbar">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <app-navbar-buttons></app-navbar-buttons>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="../../../assets/images/logo.png" width="500px">
+      </a>
+    </div>
+    <div class="input-group mb-3 my-search-area">
+      <input type="text" class="form-control my-search-input" placeholder="Faça aqui a sua pesquisa">
+      <div class="input-group-append">
+        <span class="input-group-text my-input-addon"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="row justify-content-center">
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+        <div class="col">
+          <app-profession-card></app-profession-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

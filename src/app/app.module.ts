@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { NavbarButtonsComponent } from './components/navbar-buttons/navbar-buttons.component';
 import { SearchFiltersComponent } from './components/search-filters/search-filters.component';
+import { ProfessionCardComponent } from './components/profession-card/profession-card.component';
 
 
 
@@ -30,6 +31,7 @@ import { SearchFiltersComponent } from './components/search-filters/search-filte
     SearchPageComponent,
     NavbarButtonsComponent,
     SearchFiltersComponent,
+    ProfessionCardComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,13 +1,13 @@
 <nav class="navbar fixed-top navbar-expand-lg my-filter-container">
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Exemplo: Canalizador, Eletricista, Pintor...">
+    <input type="text" class="form-control my-input" placeholder="Exemplo: Canalizador, Eletricista, Pintor...">
     <div class="input-group-append">
       <button class="btn btn-primary" type="button" id="button-addon2">Search<i class="fa fa-search my-search-icon"></i></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm input-group mb-3">
-        <kendo-autocomplete class="form-control"
+        <kendo-autocomplete class="form-control my-input"
           [data]="cities"
           [placeholder]="'Exemplo: Porto'"
         ></kendo-autocomplete>
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="col-sm input-group mb-3">
-        <kendo-datepicker class="my-date-picker" placeholder="Qual a sua disponibilidade?"
+        <kendo-datepicker class="my-date-picker my-input" placeholder="Qual a sua disponibilidade?"
           [min]="minDate"
           [format]="'dd-MM-yyyy'"
           [formatPlaceholder]="{ year: 'ano', month: 'mês', day: 'dia' }"
@@ -26,7 +26,7 @@
     </div>
     <div class="col-sm input-group mb-3 my-price-col">
       <div class="my-slider-title">{{price}}€/hora</div>
-      <kendo-slider
+      <kendo-slider class="my-input"
         [showButtons]="false"
         [tickPlacement]="'none'"
         [min]="1"

@@ -25,3 +25,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .k-dateinput-wrap .k-input{
   color: #707070;
 }
+
+input:focus{
+  box-shadow: none !important;
+}

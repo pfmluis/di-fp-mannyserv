@@ -10,7 +10,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path:'login', component: LoginPageComponent},
-  {path: 'search/:content', component: SearchPageComponent}
+  {path: 'search', component: SearchPageComponent}
 ];
 
 @NgModule({
