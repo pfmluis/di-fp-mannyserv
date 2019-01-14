@@ -1,4 +1,40 @@
 .my-filter-container{
   margin-top: 50px;
   background-color: #D9DCDE!important;
+  padding: 30px 150px 0px 150px;
+  display: block;
+}
+
+.my-search-icon{
+  margin-left: 10px;
+}
+
+.my-group-addon{
+  background-color: #007bff;
+  color: #fff;
+  height: calc(2.25rem + 2px);
+}
+
+.my-price-col{
+  display: block;
+}
+
+.my-price-slider{
+  width: 100%;
+}
+
+.my-slider-title{
+  color: #707070;
+  margin-top: -5px;
+
+}
+
+.my-date-picker{
+  height: calc(2.25rem + 3px) !important;
+  width: 100% !important;
+}
+
+.k-select{
+  border-radius: .25rem .25rem 0rem 0rem;
+  width: 38px !important;
 }

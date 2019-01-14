@@ -9,3 +9,19 @@ body{
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.k-datepicker .k-select{
+  background-color: #007bff !important;
+  width: 38px;
+  color:#ffffff;
+  height: calc(0.75rem + 1.5em + 1px);
+  border-radius: 0rem .25rem .25rem 0rem !important;
+  right: 5px;
+}
+
+.k-datepicker .k-picker-wrap{
+  border-radius: .3rem;
+}
+
+.k-dateinput-wrap .k-input{
+  color: #707070;
+}

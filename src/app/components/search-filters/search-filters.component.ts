@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { cities } from '../../data/cities';
 
 @Component({
   selector: 'app-search-filters',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFiltersComponent implements OnInit {
 
-  constructor() { }
+  public price: number = 10;
+  public minDate: Date = new Date();
+  public cities = cities;
+  constructor() {}
+
 
   ngOnInit() {
   }
