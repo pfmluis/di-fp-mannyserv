@@ -10,6 +10,7 @@ import { LoginCardComponent } from './components/login-card/login-card.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { NavbarButtonsComponent } from './components/navbar-buttons/navbar-buttons.component';
+import { SearchFiltersComponent } from './components/search-filters/search-filters.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavbarButtonsComponent } from './components/navbar-buttons/navbar-butto
     NavbarComponent,
     SearchPageComponent,
     NavbarButtonsComponent,
+    SearchFiltersComponent,
   ],
   imports: [
     AppRoutingModule,
