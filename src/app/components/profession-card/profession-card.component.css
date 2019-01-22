@@ -1,5 +1,22 @@
 .profession-card-wrapper{
+  box-shadow: 10px 10px 23px 0px rgb(213, 213, 213);
   background-color: #EFEFEF;
+  padding: 30px;
   width: 200px;
   height: 200px;
+}
+
+.image-wrapper{
+  margin-bottom: 20px;
+}
+.profession-name-wrapper{
+  border-top: #cdcdcd solid 1px !important;
+  color: #767676;
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+.card-link:hover{
+  text-decoration: none;
+  color: #333333;
 }

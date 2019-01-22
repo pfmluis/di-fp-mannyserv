@@ -3,6 +3,7 @@
   background-color: #D9DCDE!important;
   padding: 30px 150px 0px 150px;
   display: block;
+  z-index: 1;
 }
 
 .my-search-icon{

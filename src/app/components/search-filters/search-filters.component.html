@@ -1,26 +1,27 @@
 <nav class="navbar fixed-top navbar-expand-lg my-filter-container">
   <div class="input-group mb-3">
-    <input type="text" class="form-control my-input" placeholder="Exemplo: Canalizador, Eletricista, Pintor...">
+    <input type="text" class="form-control my-input" placeholder="Exemplo: Canalizador, Eletricista, Pintor..." name="searchField" [(ngModel)]="searchField">
     <div class="input-group-append">
-      <button class="btn btn-primary" type="button" id="button-addon2">Search<i class="fa fa-search my-search-icon"></i></button>
+      <button class="btn btn-primary" type="button" id="button-addon2" (click)="onSubmit()">Search<i class="fa fa-search my-search-icon"></i></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm input-group mb-3">
-        <kendo-autocomplete class="form-control my-input"
+        <kendo-autocomplete  class="form-control my-input" name="city"
+          [(ngModel)]="city"
           [data]="cities"
           [placeholder]="'Exemplo: Porto'"
-        ></kendo-autocomplete>
+        ></kendo-autocomplete >
       <div class="input-group-append">
         <span class="input-group-text my-group-addon" id="basic-addon2"><i class="fas fa-map-marker-alt"></i></span>
       </div>
     </div>
     <div class="col-sm input-group mb-3">
-        <kendo-datepicker class="my-date-picker my-input" placeholder="Qual a sua disponibilidade?"
+        <kendo-datepicker class="my-date-picker my-input" placeholder="Qual a sua disponibilidade?" name="date"
           [min]="minDate"
           [format]="'dd-MM-yyyy'"
           [formatPlaceholder]="{ year: 'ano', month: 'mês', day: 'dia' }"
-          [(value)]="value"
+          [(ngModel)]="date"
         ></kendo-datepicker>
 
     </div>

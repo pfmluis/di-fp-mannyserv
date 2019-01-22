@@ -1,5 +1,8 @@
+import { ActivatedRoute  } from '@angular/router';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { Component, OnInit } from '@angular/core';
+import { SearchFilter } from './../../classes/search-filter';
+
 import { cities } from '../../data/cities';
 
 @Component({
@@ -9,13 +12,30 @@ import { cities } from '../../data/cities';
 })
 export class SearchFiltersComponent implements OnInit {
 
-  public price: number = 10;
-  public minDate: Date = new Date();
-  public cities = cities;
-  constructor() {}
+  @Output() submitted = new EventEmitter<SearchFilter>();
 
+  searchField: string;
+  price: number;
+  date: Date;
+  minDate: Date;
+  city: string;
+  cities;
+
+  constructor(private aRouter: ActivatedRoute ) {
+    this.price = 10;
+    this.minDate = new Date();
+    this.cities = cities;
+    if (this.aRouter.snapshot.params.content) {
+      this.searchField = this.aRouter.snapshot.params.content;
+    }
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit(): void {
+    const filter = new SearchFilter(this.searchField, this.city, this.date, this.price);
+    this.submitted.emit(filter);
   }
 
 }

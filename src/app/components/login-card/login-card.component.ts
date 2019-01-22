@@ -8,11 +8,8 @@ import { Router } from '@angular/router';
 })
 export class LoginCardComponent implements OnInit {
 
-  username:string;
-  password:string;
-
-  constructor(private router:Router) {
-    if(localStorage.getItem('username')){
+  constructor(private router: Router) {
+    if (localStorage.getItem('username')) {
       this.router.navigate(['/']);
     }
   }
@@ -20,10 +17,10 @@ export class LoginCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLoginClick(){
-    if(this.username==='user' && this.password==='123'){
+  onLoginClick(username: string, password: string) {
+    if (username === 'user' && password === '123') {
       this.router.navigate(['/']);
-      localStorage.setItem('username', 'user');
+      localStorage.setItem('username', username);
     }
   }
 

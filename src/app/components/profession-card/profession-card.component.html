@@ -1,5 +1,12 @@
-<a routerLink="search">
+<a class="card-link" routerLink="search/{{professionName}}">
   <div class="profession-card-wrapper">
-
+    <div class="image-wrapper">
+      <img src="{{professionImage}}" width="100px"/>
+    </div>
+    <div class="profession-name-wrapper">
+      <p>
+        {{professionName}}
+      </p>
+    </div>
   </div>
 </a>

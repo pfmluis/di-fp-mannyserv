@@ -29,3 +29,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 input:focus{
   box-shadow: none !important;
 }
+
+.current {
+  background: #007bff !important;
+  color: #ffffff;
+}
+
+.ngx-pagination a{
+  color: #333333!important;
+  text-decoration: none;
+  margin-top: 30px;
+}

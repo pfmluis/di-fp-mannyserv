@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-profession-card',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profession-card.component.css']
 })
 export class ProfessionCardComponent implements OnInit {
+
+  @Input() professionName;
+  @Input() professionImage;
 
   constructor() { }
 

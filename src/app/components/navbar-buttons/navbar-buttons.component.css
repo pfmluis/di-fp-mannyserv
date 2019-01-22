@@ -10,6 +10,7 @@
   border-top: none;
   border-radius: 0px 0px 10px 10px;
   left: -100px;
+  z-index: 2;
 }
 
 .my-dropbox-item{

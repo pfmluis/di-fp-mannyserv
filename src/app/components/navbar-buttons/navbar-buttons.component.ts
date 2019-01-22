@@ -21,9 +21,9 @@ export class NavbarButtonsComponent implements OnInit {
   }
 
   loggedIn(): boolean {
-    if(localStorage.username){
+    if (localStorage.username) {
       return true;
-    }else{
+    } else {
       return false;
     }
   }

@@ -1,3 +1,18 @@
+
 <app-navbar></app-navbar>
-<app-search-filters></app-search-filters>
-<div style="padding-top: 1000px; background-color: #EFEFEF"></div>
+<app-search-filters (submitted)="onSubmit($event)"></app-search-filters>
+<div class="search-wrapper">
+  <ul>
+      <ul>
+        <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }"> {{item}} </li>
+      </ul>
+
+      <pagination-controls class="my-pagination"
+        (pageChange)="p = $event"
+        previousLabel=""
+        nextLabel="">
+      </pagination-controls>
+  </ul>
+</div>
+
+

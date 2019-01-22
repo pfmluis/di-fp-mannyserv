@@ -4,10 +4,10 @@
     </div>
     <form>
       <div class="form-group">
-        <input type="text" class="form-control form-input" placeholder="Username" [(ngModel)]="username" name="username">  
+        <input type="text" class="form-control form-input" placeholder="Username" #username>
       </div>
       <div class="form-group">
-        <input type="password" class="form-control form-input" placeholder="Password" [(ngModel)]="password" name="password">
+        <input type="password" class="form-control form-input" placeholder="Password" #password>
       </div>
       <div class="row">
         <div class="form-group col-xs-6 col-sm-6" id="rememberMeDiv">
@@ -17,15 +17,15 @@
           </div>
         </div>
         <div class="form-group col-xs-6 col-sm-6" id="forgotPwDiv">
-          <a class="btn-link" id="forgotPW">Esqueceu-se da sua password?</a>
+          <a class="btn-link" id="forgotPW" routerLink="/register">Esqueceu-se da sua password?</a>
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary form-control" id="loginButton" (click)="onLoginClick()">Entrar</button>
+        <button class="btn btn-primary form-control" id="loginButton" (click)="onLoginClick(username.value, password.value)">Entrar</button>
       </div>
       <div class="row" id="registerNowDiv">
         <label>Ainda não é nosso membro?</label>
-        <a class="btn-link" id="registerLink">Registe-se já!</a>
+        <a class="btn-link" id="registerLink" routerLink="/register">Registe-se já!</a>
       </div>
     </form>
     <hr id="separator"/>
@@ -40,4 +40,3 @@
           Log in with Facebook</button>
       </div>
   </div>
-  

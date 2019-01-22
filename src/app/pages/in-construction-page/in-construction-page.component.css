@@ -1,0 +1,20 @@
+.page-wrapper{
+  background-image: url('../../../assets/images/contructing-art-276724.jpg');
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+}
+
+.in-construction-container{
+  margin-top: 17%;
+  text-align: center;
+}
+
+h1, h2 , p{
+  color: white;
+}
+
+h1 {
+  font-size: 75px;
+  font-weight: bold;
+}
