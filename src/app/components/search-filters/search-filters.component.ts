@@ -19,7 +19,7 @@ export class SearchFiltersComponent implements OnInit {
   date: Date;
   minDate: Date;
   city: string;
-  cities;
+  cities: any;
 
   constructor(private aRouter: ActivatedRoute ) {
     this.price = 10;

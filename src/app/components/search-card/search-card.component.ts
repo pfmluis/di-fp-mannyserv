@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCardComponent implements OnInit {
 
+  name = 'Júlio Santos';
+  location = 'Porto';
+  speciallity = 'Eletricista';
+  price = 20;
+  rate = 4;
+
   constructor() { }
 
   ngOnInit() {

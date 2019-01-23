@@ -1,3 +1,46 @@
-<p>
-  search-card works!
-</p>
+<div class="card-container">
+  <div class="image-container">
+      <img src="../../../assets/images/cables-close-up-computer-257736.jpg" class="prof-bg-img">
+      <img src="../../../assets/images/Users/user1.jpg" class="rounded-circle prof-img" width="100px">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <label class="card-label">Nome:</label> {{name}}
+      </div>
+      <div class="col">
+        <label class="card-label">Preço:</label> {{price}}€/hr
+      </div>
+      <div class="col classification-col">
+        <label class="card-label">Classificação:</label>
+        <div class="rate-box">
+          <div class="rate" [ngClass]="rate >= 4.5 ? 'high' : rate >= 3.5 ? 'medium-high' : rate >= 3 ? 'medium' : rate >= 2 ? 'medium-low' : 'low'">
+            {{rate}}
+          </div> / 5
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="card-label">Localização:</label> {{location}}
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="card-label">Especialidade:</label> {{speciallity}}
+      </div>
+      <div class="col">
+
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+  <div class="link">
+    <h1>Link</h1>
+  </div>
+</div>

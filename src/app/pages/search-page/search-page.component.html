@@ -2,17 +2,18 @@
 <app-navbar></app-navbar>
 <app-search-filters (submitted)="onSubmit($event)"></app-search-filters>
 <div class="search-wrapper">
-  <ul>
-      <ul>
-        <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }"> {{item}} </li>
-      </ul>
-
+    <ul>
+      <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }">
+        <app-search-card></app-search-card>
+      </li>
+    </ul>
+    <div class="center">
       <pagination-controls class="my-pagination"
-        (pageChange)="p = $event"
-        previousLabel=""
-        nextLabel="">
-      </pagination-controls>
-  </ul>
+      (pageChange)="p = $event"
+      previousLabel=""
+      nextLabel="">
+    </pagination-controls>
+    </div>
 </div>
 
 

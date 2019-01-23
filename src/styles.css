@@ -1,5 +1,6 @@
 html{
   height: 100%;
+  background-color: #EFEFEF;
 }
 
 body{
@@ -33,6 +34,7 @@ input:focus{
 .current {
   background: #007bff !important;
   color: #ffffff;
+  margin-bottom: 25px;
 }
 
 .ngx-pagination a{
