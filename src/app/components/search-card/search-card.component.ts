@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-search-card',
@@ -7,15 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCardComponent implements OnInit {
 
-  name = 'Júlio Santos';
-  location = 'Porto';
-  speciallity = 'Eletricista';
-  price = 20;
-  rate = 4;
+  @Input() name: string;
+  @Input() image: string;
+  @Input() location: string;
+  @Input() speciallity: string;
+  @Input() price: number;
+  @Input() rate: number;
+  @Input() tags: string[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  getImage(): string {
+    if ( this.speciallity === 'Eletricista' ) {
+      return '../../../assets/images/cables-close-up-computer-257736.jpg';
+    } else if ( this.speciallity === 'Canalizador') {
+      return '../../../assets/images/plumbing.jpg';
+    } else {
+      return '';
+    }
+  }
 }

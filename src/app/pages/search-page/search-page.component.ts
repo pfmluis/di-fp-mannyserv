@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { cities } from './../../data/cities';
+import { professionals } from './../../data/professionals';
 
 import { SearchFilter } from './../../classes/search-filter';
 
@@ -13,7 +13,7 @@ import { SearchFilter } from './../../classes/search-filter';
 export class SearchPageComponent implements OnInit {
 
   p = 1;
-  collection: any[] = cities;
+  collection: any[] = professionals;
   result: SearchFilter;
   constructor() { }
 

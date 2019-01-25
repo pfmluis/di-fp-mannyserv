@@ -3,8 +3,16 @@
 <app-search-filters (submitted)="onSubmit($event)"></app-search-filters>
 <div class="search-wrapper">
     <ul>
-      <li *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: p }">
-        <app-search-card></app-search-card>
+      <li *ngFor="let i=index; let item of collection | paginate: { itemsPerPage: 10, currentPage: p }">
+        <app-search-card
+          name="{{item.name}}"
+          image="../../../assets/images/Users/user{{i}}.jpg"
+          location="{{item.location}}"
+          speciallity="{{item.speciallity}}"
+          price={{item.price}}
+          rate={{item.classification}}
+          [tags]="item.tags"
+          ></app-search-card>
       </li>
     </ul>
     <div class="center">

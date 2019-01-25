@@ -1,7 +1,7 @@
-<div class="card-container">
+<div class="card-container container-fluid">
   <div class="image-container">
-      <img src="../../../assets/images/cables-close-up-computer-257736.jpg" class="prof-bg-img">
-      <img src="../../../assets/images/Users/user1.jpg" class="rounded-circle prof-img" width="100px">
+      <img [src]="getImage()" class="prof-bg-img">
+      <img src="{{image}}" class="rounded-circle prof-img" width="100px">
   </div>
   <div class="container">
     <div class="row">
@@ -9,7 +9,7 @@
         <label class="card-label">Nome:</label> {{name}}
       </div>
       <div class="col">
-        <label class="card-label">Preço:</label> {{price}}€/hr
+        <label class="card-label middle">Preço:</label> {{price}}€/hr
       </div>
       <div class="col classification-col">
         <label class="card-label">Classificação:</label>
@@ -21,26 +21,23 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col col-4">
         <label class="card-label">Localização:</label> {{location}}
       </div>
-      <div class="col">
-      </div>
-      <div class="col">
+      <div class="col col-8">
+        <hr>
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col col-4">
         <label class="card-label">Especialidade:</label> {{speciallity}}
       </div>
-      <div class="col">
-
-      </div>
-      <div class="col">
+      <div class="col col-8 tags-col">
+        <span class="badge badge-pill badge-primary" *ngFor="let tag of tags">{{tag}}</span>
       </div>
     </div>
   </div>
-  <div class="link">
-    <h1>Link</h1>
+  <div class="link-container">
+    <h1><i class="fas fa-chevron-circle-right"></i></h1>
   </div>
 </div>

@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   color: #707070;
+  overflow: hidden;
 }
 
 .prof-img{
@@ -29,8 +30,8 @@
 }
 
 .col{
-  padding: 4px 0px;
-  height: 40px;
+  padding: 0px 0px;
+  height: 35px;
 }
 
 .card-label{
@@ -40,6 +41,10 @@
 .classification-col{
   display: flex;
   align-items: center;
+}
+
+.container{
+  width: 66%;
 }
 
 .rate-box{
@@ -75,4 +80,21 @@
 
 .high{
   color: #20c997;
+}
+
+.badge{
+  margin-right: 10px;
+}
+
+.tags-col{
+  margin-bottom: 15px;
+}
+
+.link-container{
+  margin-right: 50px;
+  color: #d9dcde;
+}
+
+.badge{
+  padding: .5em .4em !important;
 }
