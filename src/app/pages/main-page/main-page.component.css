@@ -23,7 +23,7 @@
 
 .card-container{
   background-color: #ffffff;
-  padding: 20px 35px 5px 50px;
+  padding: 20px 35px 50px 50px;
   margin-bottom: 30px;
 }
 
@@ -52,10 +52,6 @@
 .my-search-area{
   padding: 0px 75px;
   margin-bottom: 50px !important;
-}
-
-.last-row{
-  margin-bottom: 50px
 }
 
 .profession-card-wrapper{
