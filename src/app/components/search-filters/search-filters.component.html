@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg my-filter-container">
   <div class="input-group mb-3">
-    <input type="text" class="form-control my-input" placeholder="Exemplo: Canalizador, Eletricista, Pintor..." name="searchField" [(ngModel)]="searchField">
+    <input type="text" class="form-control my-input" placeholder="Exemplo: Canalizador, Eletricista, Pintor..." name="searchField" [(ngModel)]="searchField" (keydown)="onKeydown($event)">
     <div class="input-group-append">
       <button class="btn btn-primary" type="button" id="button-addon2" (click)="onSubmit()">Search<i class="fa fa-search my-search-icon"></i></button>
     </div>
@@ -11,6 +11,7 @@
           [(ngModel)]="city"
           [data]="cities"
           [placeholder]="'Exemplo: Porto'"
+          (keydown)="onKeydown($event)"
         ></kendo-autocomplete >
       <div class="input-group-append">
         <span class="input-group-text my-group-addon" id="basic-addon2"><i class="fas fa-map-marker-alt"></i></span>
@@ -22,6 +23,7 @@
           [format]="'dd-MM-yyyy'"
           [formatPlaceholder]="{ year: 'ano', month: 'mês', day: 'dia' }"
           [(ngModel)]="date"
+          (keydown)="onKeydown($event)"
         ></kendo-datepicker>
 
     </div>
@@ -34,6 +36,7 @@
         [max]="50"
         [smallStep]="1"
         [(ngModel)] = "price" class="my-price-slider"
+        (keydown)="onKeydown($event)"
       ></kendo-slider>
     </div>
   </div>

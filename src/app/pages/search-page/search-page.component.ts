@@ -22,54 +22,62 @@ export class SearchPageComponent implements OnInit {
 
   ngOnInit() {
     const profession = this.route.snapshot.params.content;
-    this.filterResults(new SearchFilter(profession, null, null, Number.MAX_SAFE_INTEGER));
+    if (profession) {
+      this.filterResults(new SearchFilter(profession, null, null, Number.MAX_SAFE_INTEGER));
+    }
   }
 
   onSubmit(result: SearchFilter): void {
     this.filterResults(result);
   }
 
-  filterResults(result: SearchFilter): void {
+  filterResults(result: SearchFilter) {
     this.collection = [];
-    if (result) {
-      professionals.forEach(professional => {
-        if (result.profession && result.location) {
-          if (
-              professional.speciallity.includes(result.profession) &&
-              professional.price <= result.price &&
-              professional.location === result.location ||
-              professional.tags.includes(result.profession)  &&
-              professional.price <= result.price &&
-              professional.location === result.location
-              ) {
-              this.collection.push(professional);
-            }
-        } else if (result.profession && !result.location) {
-          if (
-            professional.speciallity.includes(result.profession) &&
-            professional.price <= result.price ||
-            professional.tags.includes(result.profession)  &&
-            professional.price <= result.price
-            ) {
-            this.collection.push(professional);
-          }
-        } else if (!result.profession && result.location) {
-          if (
-            professional.price <= result.price &&
-            professional.location === result.location ||
-            professional.price <= result.price &&
-            professional.location === result.location
-            ) {
-            this.collection.push(professional);
-        } else {
-          if (professional.price <= result.price) {
-              this.collection.push(professional);
-          }
+    if (result.profession) {
+      const results: string[] = result.profession.toLowerCase().split(' ');
+      results.forEach((res) => {
+        if ( result.location ) {
+          professionals.forEach((professional) => {
+            if (professional.speciallity.toLowerCase().includes(res) &&
+                professional.location === result.location &&
+                professional.price <= result.price ||
+                professional.tags.toLocaleString().toLocaleLowerCase().includes(res) &&
+                professional.location === result.location &&
+                professional.price <= result.price) {
+                  if (!this.collection.includes(professional)) {
+                    this.collection.push(professional);
+                  }
+               }
+          });
+        } else  {
+          professionals.forEach((professional) => {
+            if (professional.speciallity.toLowerCase().includes(res) &&
+                professional.price <= result.price ||
+                professional.tags.toLocaleString().toLowerCase().includes(res) &&
+                professional.price <= result.price) {
+                if (!this.collection.includes(professional)) {
+                  this.collection.push(professional);
+                }
+               }
+          });
         }
-      }
-    });
+      });
     } else {
-      this.collection = professionals;
+      if (result.location) {
+        professionals.forEach((professional) => {
+          if (professional.location === result.location &&
+              professional.price <= result.price) {
+                if (!this.collection.includes(professional)) {
+                  this.collection.push(professional);
+                }
+          }
+        });
+      } else {
+        this.collection = professionals;
+      }
     }
+
   }
+
+
 }

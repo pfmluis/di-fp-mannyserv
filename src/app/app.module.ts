@@ -21,6 +21,7 @@ import { SearchFiltersComponent } from './components/search-filters/search-filte
 import { ProfessionCardComponent } from './components/profession-card/profession-card.component';
 import { InConstructionPageComponent } from './pages/in-construction-page/in-construction-page.component';
 import { SearchCardComponent } from './components/search-card/search-card.component';
+import { ProfessionalProfileComponent } from './pages/professional-profile/professional-profile.component';
 
 
 
@@ -37,6 +38,7 @@ import { SearchCardComponent } from './components/search-card/search-card.compon
     ProfessionCardComponent,
     InConstructionPageComponent,
     SearchCardComponent,
+    ProfessionalProfileComponent,
   ],
   imports: [
     AppRoutingModule,

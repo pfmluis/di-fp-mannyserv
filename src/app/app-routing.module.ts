@@ -16,7 +16,9 @@ const routes: Routes = [
   {path: 'search', component: SearchPageComponent},
   {path: 'mapa_do_site', component: InConstructionPageComponent},
   {path: 'contactos', component: InConstructionPageComponent},
-  {path: 'apoio', component: InConstructionPageComponent}
+  {path: 'apoio', component: InConstructionPageComponent},
+  {path: 'myprofile', component: InConstructionPageComponent},
+  {path: 'history', component: InConstructionPageComponent}
 ];
 
 @NgModule({

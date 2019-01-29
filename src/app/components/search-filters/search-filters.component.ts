@@ -22,7 +22,7 @@ export class SearchFiltersComponent implements OnInit {
   cities: any;
 
   constructor(private aRouter: ActivatedRoute ) {
-    this.price = 50;
+    this.price = 25;
     this.minDate = new Date();
     this.cities = cities;
     if (this.aRouter.snapshot.params.content) {
@@ -36,6 +36,13 @@ export class SearchFiltersComponent implements OnInit {
   onSubmit(): void {
     const filter = new SearchFilter(this.searchField, this.city, this.date, this.price);
     this.submitted.emit(filter);
+  }
+
+  onKeydown(event) {
+    if (event.keyCode === 13 && this.searchField) {
+      const filter = new SearchFilter(this.searchField, this.city, this.date, this.price);
+      this.submitted.emit(filter);
+    }
   }
 
 }
