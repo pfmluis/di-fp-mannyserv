@@ -1,4 +1,4 @@
-html{
+html, body{
   height: 100%;
   background-color: #EFEFEF;
 }
@@ -8,7 +8,9 @@ body{
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  font-family: url('assets/fonts/segoeui.ttf') !important;
+}
 
 .k-datepicker .k-select{
   background-color: #007bff !important;

@@ -4,6 +4,9 @@ export class Professional {
   location: string;
   speciallity: string;
   price: number;
+  phone: string;
+  email: string;
+  description: string;
   classification: number;
   tags: string[];
 }

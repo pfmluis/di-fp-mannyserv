@@ -1,3 +1,71 @@
-<p>
-  professional-profile works!
-</p>
+<app-navbar></app-navbar>
+<div class="page-wrapper">
+  <div class="container">
+    <div class="image-container" [ngClass]="professional.speciallity === 'Eletricista' ? 'eletricista' : professional.speciallity === 'Canalizador' ? 'plumber' : ''">
+      <h2 class="name">{{professional.name}}</h2>
+    </div>
+    <div class="profile-picture-container">
+      <img class="profile-picture  rounded-circle" src="../../../assets/images/Users/user{{professional.id}}.jpg">
+    </div>
+    <div class="container-fluid my-container">
+      <div class="flex-box">
+      <div class="information-container">
+        <div class="tags-container">
+          <h5>
+            <span class="badge badge-pill badge-primary my-tag" *ngFor="let tag of professional.tags">{{tag}}</span>
+          </h5>
+        </div>
+        <div class="row my-information-row">
+          <div class="col-12">
+            <label class="field-title">Informação</label>
+          </div>
+          <div class="col-6 my-col">
+            <img src="../../../assets/images/profile-icons/suitcase.png" width="25px">
+            <label class="field-label">Especialidade:</label>
+            {{professional.speciallity}}
+          </div>
+          <div class="col-6 my-col">
+            <img src="../../../assets/images/profile-icons/smartphone.png" width="25px">
+            <label class="field-label">Telefone:</label>
+            {{professional.phone}}
+          </div>
+          <div class="col-6 my-col">
+            <img src="../../../assets/images/profile-icons/placeholder.png" width="25px">
+            <label class="field-label">Localização:</label>
+            {{professional.location}}
+          </div>
+          <div class="col-6 my-col">
+            <img src="../../../assets/images/profile-icons/arroba.png" width="25px">
+              <label class="field-label">Email:</label>
+              {{professional.email}}
+          </div>
+          <div class="col-6 my-col">
+            <img src="../../../assets/images/profile-icons/favorite.png" width="25px">
+            <label class="field-label">Classificação:</label>
+            {{professional.classification}}
+          </div>
+          <div class="col-6 my-col">
+          </div>
+        </div>
+      </div>
+      <div class="row my-buttons-row">
+        <div class="col-12 my-col">
+          <button class="btn btn-primary my-button"><i class="fas fa-address-book my-icon"></i>Agende um serviço</button>
+        </div>
+        <div class="col-12 my-col">
+          <button class="btn btn-outline-primary my-button"><i class="fas fa-envelope my-icon"></i>Envie uma mensagem a {{professional.name.split(' ')[0]}} </button>
+        </div>
+        <div class="col-6 my-col">
+        </div>
+        <div class="col-6 my-col">
+          <label class="price-tag">{{professional.price}}€/hora</label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label class="field-title">Descrição</label>
+      <p>{{professional.description}}</p>
+    </div>
+    </div>
+  </div>
+</div>

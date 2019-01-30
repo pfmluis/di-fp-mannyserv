@@ -1,0 +1,104 @@
+.page-wrapper{
+  padding: 75px 50px 0px 50px;
+  width: 100%;
+}
+
+.my-container{
+  background-color: #ffffff;
+  padding: 0px 50px 50px 50px;
+  margin-bottom: 50px;
+}
+
+.image-container{
+  width: 100%;
+  height: 200px;
+  box-shadow: inset 0 -75px 300px -50px #222222;
+}
+
+.eletricista{
+  background: url('../../../assets/images/cables-close-up-computer-257736.jpg');
+  background-position-y: -100px !important;
+  background-size: cover;
+}
+
+.plumber{
+  background: url('../../../assets/images/plumbing.jpg');
+  background-position-y: -100px !important;
+  background-size: cover;
+
+}
+
+.background-image{
+  width: 100%;
+}
+
+.name{
+  margin-left: 250px;
+  padding-top: 150px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.profile-picture{
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  margin-left: 30px;
+  margin-top: -120px;
+  z-index: 1000;
+  border: solid 5px #fff;
+}
+
+.my-information-row{
+  padding: 0px 0px 50px 0px;
+}
+
+.my-buttons-row{
+  text-align: right;
+  width: 750px;
+  padding: 25px 0px 90px 75px;
+}
+
+.field-label{
+  font-weight: bold;
+  margin: 0px 3px 0px 7px;
+}
+
+.field-title{
+  color: #007bff;
+  font-size: 25px;
+}
+
+.my-button{
+  width: 225px;
+}
+
+.my-col{
+  padding: 5px 15px;
+}
+
+.price-tag{
+  color: #007BFF;
+  font-size: 30px;
+}
+
+.my-icon{
+  margin-right: 5px;
+}
+
+.information-container{
+  display: block;
+}
+
+.tags-container{
+  padding: 25px 0px 35px 250px;
+}
+
+.my-tag{
+  margin: 0px 5px;
+}
+
+.flex-box{
+  display: flex;
+}
