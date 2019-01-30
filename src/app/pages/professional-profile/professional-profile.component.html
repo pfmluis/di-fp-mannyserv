@@ -50,7 +50,7 @@
       </div>
       <div class="row my-buttons-row">
         <div class="col-12 my-col">
-          <button class="btn btn-primary my-button"><i class="fas fa-address-book my-icon"></i>Agende um serviço</button>
+          <button class="btn btn-primary my-button" (click)="open('dialog')"><i class="fas fa-address-book my-icon"></i>Agende um serviço</button>
         </div>
         <div class="col-12 my-col">
           <button class="btn btn-outline-primary my-button"><i class="fas fa-envelope my-icon"></i>Envie uma mensagem a {{professional.name.split(' ')[0]}} </button>
@@ -69,3 +69,64 @@
     </div>
   </div>
 </div>
+<kendo-dialog title="Agendamento de um serviço" *ngIf="dialogOpened && step===1;" (close)="close('dialog')" [minWidth]="250" [width]="500" [height]="625">
+  <div class="block-box dialog-div">
+    <div class="alert alert-danger" role="alert" *ngIf="invalidForm">
+      Todos os campos devem ser preenchidos!
+    </div>
+    <div class="flex-box dialog-item">
+      <label class="dialog-label">Dia da visita: </label>
+      <kendo-datepicker class="my-date-picker my-input" placeholder="Qual a sua disponibilidade?" name="date"
+        [min]="minDate"
+        [format]="'dd-MM-yyyy'"
+        [formatPlaceholder]="{ year: 'ano', month: 'mês', day: 'dia' }"
+        [(ngModel)]="date"
+        (keydown)="onKeydown($event)"
+        (ngModelChange)="invalidForm=false"
+      ></kendo-datepicker>
+    </div>
+    <div class="flex-box dialog-item">
+      <label class="dialog-label">Hora da visita: </label>
+      <kendo-timepicker class="my-date-picker my-input" placeholder="A que horas pretende?"
+        [(ngModel)]="hour"
+        [format]="'HH:mm'"
+        [formatPlaceholder]="{ hour: 'hora', minute: 'minuto' }"
+        [min]="minHour"
+        [max]="maxHour"
+        [steps]="steps"
+        (ngModelChange)="invalidForm=false"
+      ></kendo-timepicker>
+    </div>
+    <form>
+        <div class="form-group">
+          <label>Morada</label>
+          <input type="text" class="form-control form-input" placeholder="Morada" [(ngModel)]="address" name="address" (ngModelChange)="invalidForm=false">
+        </div>
+        <div class="form-group">
+          <label>Localização</label>
+          <kendo-autocomplete  class="form-control my-input" name="city"
+          [(ngModel)]="city"
+          [data]="cityList"
+          [placeholder]="'Exemplo: Porto'"
+          (ngModelChange)="invalidForm=false"
+        ></kendo-autocomplete >
+        </div>
+        <div class="form-group block-box">
+          <label>Código Postal</label>
+        <br/>
+          <kendo-maskedtextbox [mask]="mask" [value]="zipcode" (ngModelChange)="invalidForm=false"></kendo-maskedtextbox>
+        </div>
+
+    </form>
+  </div>
+  <kendo-dialog-actions>
+    <button kendoButton  (click)="close()">Cancelar</button>
+    <button kendoButton (click)="action('continue')" primary="true">Agendar</button>
+  </kendo-dialog-actions>
+</kendo-dialog>
+<kendo-dialog [width]="400" *ngIf="dialogOpened && step===2;" [height]="300" title="Sucesso!">
+    <p style="text-align: center; padding-top: 5em;">A sua reserva foi feita com sucesso.</p>
+    <kendo-dialog-actions>
+      <button kendoButton primary="true">Finalizar!</button>
+    </kendo-dialog-actions>
+  </kendo-dialog>

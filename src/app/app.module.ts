@@ -1,12 +1,14 @@
 // Modules
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { ButtonModule } from '@progress/kendo-angular-buttons';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { DialogModule } from '@progress/kendo-angular-dialog';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { FormsModule } from '@angular/forms';
 import { InputsModule } from '@progress/kendo-angular-inputs';
-import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 // Components
@@ -28,12 +30,12 @@ import { ProfessionalProfileComponent } from './pages/professional-profile/profe
 @NgModule({
   declarations: [
     AppComponent,
+    LoginCardComponent,
     LoginPageComponent,
     MainPageComponent,
-    LoginCardComponent,
+    NavbarButtonsComponent,
     NavbarComponent,
     SearchPageComponent,
-    NavbarButtonsComponent,
     SearchFiltersComponent,
     ProfessionCardComponent,
     InConstructionPageComponent,
@@ -42,12 +44,14 @@ import { ProfessionalProfileComponent } from './pages/professional-profile/profe
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
+    ButtonModule,
+    DateInputsModule,
+    DialogModule,
+    DropDownsModule,
     FormsModule,
     InputsModule,
-    DateInputsModule,
-    BrowserAnimationsModule,
-    DropDownsModule,
     NgxPaginationModule
   ],
   providers: [],

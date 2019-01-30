@@ -5,10 +5,11 @@
 }
 
 .my-dropdown-menu{
+  width: 200px;
   font-size: 13px;
   margin-top: 7px;
-  border-top: none;
-  border-radius: 0px 0px 10px 10px;
+  border: none;
+  border-radius: 0px 0px 0px 10px;
   left: -100px;
   z-index: 2;
 }

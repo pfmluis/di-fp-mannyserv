@@ -5,7 +5,7 @@
 
 .my-container{
   background-color: #ffffff;
-  padding: 0px 50px 50px 50px;
+  padding: 0px 50px 20px 50px;
   margin-bottom: 50px;
 }
 
@@ -101,4 +101,21 @@
 
 .flex-box{
   display: flex;
+}
+
+.block-box{
+  display: block;
+}
+
+.dialog-item{
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dialog-label{
+  width: 150px;
+}
+
+.dialog-div{
+  padding: 25px 50px;
 }

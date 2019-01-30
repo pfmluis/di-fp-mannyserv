@@ -12,13 +12,14 @@ body {
   font-family: url('assets/fonts/segoeui.ttf') !important;
 }
 
-.k-datepicker .k-select{
+.k-datepicker .k-select,
+.k-timepicker .k-select{
   background-color: #007bff !important;
   width: 38px;
-  color:#ffffff;
-  height: calc(0.75rem + 1.5em + 1px);
+  color: #ffffff;
+  height: calc(0.75rem + 1.5em + 2px);
   border-radius: 0rem .25rem .25rem 0rem !important;
-  right: 5px;
+  margin-right: -1px;
 }
 
 .k-datepicker .k-picker-wrap{
