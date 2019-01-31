@@ -69,7 +69,7 @@
     </div>
   </div>
 </div>
-<kendo-dialog title="Agendamento de um serviço" *ngIf="dialogOpened && step===1;" (close)="close('dialog')" [minWidth]="250" [width]="500" [height]="625">
+<kendo-dialog title="Agendamento de um serviço" *ngIf="dialogOpened && step===1;" (close)="close()" [minWidth]="250" [width]="500" [height]="625">
   <div class="block-box dialog-div">
     <div class="alert alert-danger" role="alert" *ngIf="invalidForm">
       Todos os campos devem ser preenchidos!
@@ -124,9 +124,9 @@
     <button kendoButton (click)="action('continue')" primary="true">Agendar</button>
   </kendo-dialog-actions>
 </kendo-dialog>
-<kendo-dialog [width]="400" *ngIf="dialogOpened && step===2;" [height]="300" title="Sucesso!">
+<kendo-dialog (close)="close()" [width]="400" *ngIf="dialogOpened && step===2;" [height]="300" title="Sucesso!">
     <p style="text-align: center; padding-top: 5em;">A sua reserva foi feita com sucesso.</p>
     <kendo-dialog-actions>
-      <button kendoButton primary="true">Finalizar!</button>
+      <button kendoButton (click)="action('finish')" primary="true">Finalizar!</button>
     </kendo-dialog-actions>
   </kendo-dialog>
